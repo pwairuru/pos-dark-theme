@@ -5,11 +5,12 @@ export const POS_COLOR_SCHEME_KEY = "pos-color-scheme";
 export const MODES = ["light", "dark", "system"];
 
 function readStored() {
+    // Default install: light. System/Dark only after user cycles toggle.
     try {
         const v = localStorage.getItem(POS_COLOR_SCHEME_KEY);
-        return MODES.includes(v) ? v : "system";
+        return MODES.includes(v) ? v : "light";
     } catch {
-        return "system";
+        return "light";
     }
 }
 

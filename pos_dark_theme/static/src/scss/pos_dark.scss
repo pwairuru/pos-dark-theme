@@ -67,6 +67,18 @@
         border-color: #6c757d !important;
         color: #fff !important;
     }
+    // Navbar Register/Orders/Tables + order tabs: outline buttons are
+    // near-invisible gray-on-dark until hover. Always legible.
+    .btn-outline-secondary {
+        background-color: transparent !important;
+        border-color: #adb5bd !important;
+        color: #e9ecef !important;
+        &:hover, &:active, &.active {
+            background-color: #495057 !important;
+            border-color: #e9ecef !important;
+            color: #fff !important;
+        }
+    }
     .modal-content, .popup, .dialog {
         background-color: #212529 !important;
         color: #e9ecef !important;
