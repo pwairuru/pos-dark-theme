@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
-  <t t-name="pos_dark_theme.ThemeTogglePlaceholder">
-    <span class="pos-theme-placeholder" />
+  <t t-name="pos_dark_theme.ThemeToggleButton">
+    <button class="btn btn-light btn-lg lh-lg pos-theme-toggle" t-on-click="() => this.onThemeToggle()" t-att-title="this.themeTitle" t-att-aria-label="this.themeTitle">
+      <i class="oi oi-fw" t-att-data-icon="this.themeIcon" aria-hidden="true" />
+    </button>
+  </t>
+
+  <t t-inherit="point_of_sale.Navbar" t-inherit-mode="extension">
+    <xpath expr="//div[hasclass('status-buttons')]" position="inside">
+      <ThemeToggleButton />
+    </xpath>
   </t>
 </templates>
