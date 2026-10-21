@@ -1,54 +1,62 @@
 .pos.o_dark_mode {
     color-scheme: dark;
-    background-color: #1a1d21;
-    color: #e9ecef;
+    background-color: #1a1d21 !important;
+    color: #e9ecef !important;
 
     .pos-topheader {
         background-color: #212529 !important;
         border-color: #343a40 !important;
         color: #e9ecef;
     }
-    .pos-content, .product-screen, .payment-screen, .ticket-screen, .partner-list {
-        background-color: #1a1d21;
-        color: #e9ecef;
+    // Layout panes use bootstrap bg-view/bg-secondary (!important), so beat them.
+    .pos-content, .product-screen, .product-list, .leftpane, .rightpane,
+    .pads, .subpads, .switchpane, .control-buttons,
+    .payment-screen, .ticket-screen, .partner-list,
+    .o_view_nocontent, .tip-screen {
+        background-color: #1a1d21 !important;
+        color: #e9ecef !important;
+        border-color: #343a40 !important;
     }
-    .product-card, .o_pos_product_card, .orderline, .order-line {
-        background-color: #2b3035;
-        border-color: #495057;
-        color: #e9ecef;
+    .rightpane {
+        background-color: #212529 !important;
+    }
+    .product-card, .o_pos_product_card, .product, .orderline, .order-line {
+        background-color: #2b3035 !important;
+        border-color: #495057 !important;
+        color: #e9ecef !important;
         &.selected, &.highlight {
-            background-color: #375479;
-            border-color: #6ea8fe;
+            background-color: #375479 !important;
+            border-color: #6ea8fe !important;
         }
-        .price, .qty, .product-name {
-            color: #e9ecef;
+        .price, .qty, .product-name, .product-content {
+            color: #e9ecef !important;
         }
     }
     .btn-light {
-        background-color: #343a40;
-        border-color: #495057;
-        color: #e9ecef;
+        background-color: #343a40 !important;
+        border-color: #495057 !important;
+        color: #e9ecef !important;
     }
     .btn-secondary {
-        background-color: #495057;
-        border-color: #6c757d;
-        color: #fff;
+        background-color: #495057 !important;
+        border-color: #6c757d !important;
+        color: #fff !important;
     }
     .modal-content, .popup, .dialog {
-        background-color: #212529;
-        color: #e9ecef;
-        border-color: #495057;
+        background-color: #212529 !important;
+        color: #e9ecef !important;
+        border-color: #495057 !important;
     }
     input, .search-input, .pos-search-bar input {
-        background-color: #2b3035;
-        color: #e9ecef;
-        border-color: #495057;
+        background-color: #2b3035 !important;
+        color: #e9ecef !important;
+        border-color: #495057 !important;
         &::placeholder {
             color: #adb5bd;
         }
     }
     .numpad, .pay-pad, .action-buttons {
-        background-color: #212529;
+        background-color: #212529 !important;
         .btn {
             border-color: #495057;
         }
@@ -60,25 +68,21 @@
         background: #495057;
     }
     .category-selector, .category-list {
-        background-color: #212529;
+        background-color: #212529 !important;
         .category {
-            background-color: #2b3035;
-            border-color: #495057;
-            color: #e9ecef;
+            background-color: #2b3035 !important;
+            border-color: #495057 !important;
+            color: #e9ecef !important;
             &.selected {
-                background-color: #375479;
-                border-color: #6ea8fe;
+                background-color: #375479 !important;
+                border-color: #6ea8fe !important;
             }
         }
     }
     .orderline .note, .order-line .note {
-        color: #adb5bd;
+        color: #adb5bd !important;
     }
     .orderline .discount, .order-line .discount {
-        color: #8ec5ff;
-    }
-    .tip-screen {
-        background-color: #1a1d21;
-        color: #e9ecef;
+        color: #8ec5ff !important;
     }
 }
