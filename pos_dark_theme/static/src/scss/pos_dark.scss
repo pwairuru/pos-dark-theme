@@ -37,6 +37,10 @@
     .text-dark {
         color: #e9ecef !important;
     }
+    // Brand-purple action text (customer name, links) unreadable on dark.
+    .text-action {
+        color: #c9a9d6 !important;
+    }
     // Ticket / payment layout columns.
     .main-content, .left-content, .center-content, .payment-summary,
     .paymentmethods-container, .paymentlines-container,
