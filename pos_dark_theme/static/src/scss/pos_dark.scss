@@ -59,4 +59,26 @@
     ::-webkit-scrollbar-thumb {
         background: #495057;
     }
+    .category-selector, .category-list {
+        background-color: #212529;
+        .category {
+            background-color: #2b3035;
+            border-color: #495057;
+            color: #e9ecef;
+            &.selected {
+                background-color: #375479;
+                border-color: #6ea8fe;
+            }
+        }
+    }
+    .orderline .note, .order-line .note {
+        color: #adb5bd;
+    }
+    .orderline .discount, .order-line .discount {
+        color: #8ec5ff;
+    }
+    .tip-screen {
+        background-color: #1a1d21;
+        color: #e9ecef;
+    }
 }
