@@ -45,10 +45,9 @@
         color: #e9ecef !important;
         border-color: #343a40 !important;
     }
-    // Odoo color accents (category pills, card strips, order-tab tints via
-    // o_colorlist_*) must survive: exclude them from flat overrides.
-    .product-card, .o_pos_product_card, .product:not([class*="o_colorlist"]),
-    .orderline, .order-line {
+    // Odoo color accents: category pills keep stock colors (vivid, legible on
+    // dark). Tinted cards/tabs get dark treatment below; strip preserved.
+    .product-card, .o_pos_product_card, .product, .orderline, .order-line {
         background-color: #2b3035 !important;
         border-color: #495057 !important;
         color: #e9ecef !important;
@@ -60,9 +59,16 @@
             color: #e9ecef !important;
         }
     }
-    // Tinted cards keep category wash + border strip; ensure strip wins.
+    // Category strip under tinted cards must beat the flat border above
+    // (same weight, later in file wins).
     .rightpane .product[class*="o_colorlist"] {
         border-bottom-color: var(--border-color) !important;
+    }
+    // Tinted order tabs (active order wash): dark blue, not pastel.
+    .btn-secondary[class*="o_colorlist"] {
+        background-color: #375479 !important;
+        border-color: #6ea8fe !important;
+        color: #fff !important;
     }
     .product[class*="o_colorlist"] .price,
     .product[class*="o_colorlist"] .qty,
