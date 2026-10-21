@@ -1,5 +1,5 @@
 /** @odoo-module **/
-import { Component, onMounted, useState } from "@odoo/owl";
+import { Component, onMounted, proxy } from "@odoo/owl";
 import { patch } from "@web/core/utils/patch";
 import { useService } from "@web/core/utils/hooks";
 import { Navbar } from "@point_of_sale/app/components/navbar/navbar";
@@ -15,7 +15,7 @@ export class ThemeToggleButton extends Component {
     static template = "pos_dark_theme.ThemeToggleButton";
     setup() {
         this.theme = useService("pos_theme");
-        this.state = useState({ mode: this.theme.getMode() });
+        this.state = proxy({ mode: this.theme.getMode() });
         onMounted(() => {
             this.theme.apply();
         });
