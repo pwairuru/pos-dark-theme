@@ -20,6 +20,31 @@
     .rightpane {
         background-color: #212529 !important;
     }
+    // Bootstrap bg utilities (!important) and text utilities need explicit beats.
+    // All scoped under .pos: backend untouched.
+    .bg-100 {
+        background-color: #212529 !important;
+    }
+    .bg-200 {
+        background-color: #2b3035 !important;
+    }
+    .bg-view, .bg-white, .bg-light {
+        background-color: #1a1d21 !important;
+    }
+    .text-muted {
+        color: #adb5bd !important;
+    }
+    .text-dark {
+        color: #e9ecef !important;
+    }
+    // Ticket / payment layout columns.
+    .main-content, .left-content, .center-content, .payment-summary,
+    .paymentmethods-container, .paymentlines-container,
+    .leftpane, .controls, .order-row {
+        background-color: #1a1d21 !important;
+        color: #e9ecef !important;
+        border-color: #343a40 !important;
+    }
     .product-card, .o_pos_product_card, .product, .orderline, .order-line {
         background-color: #2b3035 !important;
         border-color: #495057 !important;

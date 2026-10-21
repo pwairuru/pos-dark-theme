@@ -4,7 +4,7 @@ import { patch } from "@web/core/utils/patch";
 import { useService } from "@web/core/utils/hooks";
 import { Navbar } from "@point_of_sale/app/components/navbar/navbar";
 
-export const THEME_ICONS = { light: "sun", dark: "moon", system: "contrast" };
+export const THEME_ICONS = { light: "light_mode", dark: "dark_mode", system: "contrast" };
 export const THEME_TITLES = {
     light: "Theme: Light (click for Dark)",
     dark: "Theme: Dark (click for System)",
