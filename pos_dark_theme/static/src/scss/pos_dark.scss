@@ -141,4 +141,11 @@
     .orderline .discount, .order-line .discount {
         color: #8ec5ff !important;
     }
+    // Payment icons are dark line-art on transparency: white chip keeps
+    // every method (cash, card, Mpesa) visible on dark buttons.
+    .payment-method-icon {
+        background-color: #fff !important;
+        border-radius: 6px !important;
+        padding: 2px !important;
+    }
 }
