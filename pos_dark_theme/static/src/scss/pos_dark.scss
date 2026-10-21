@@ -45,7 +45,10 @@
         color: #e9ecef !important;
         border-color: #343a40 !important;
     }
-    .product-card, .o_pos_product_card, .product, .orderline, .order-line {
+    // Odoo color accents (category pills, card strips, order-tab tints via
+    // o_colorlist_*) must survive: exclude them from flat overrides.
+    .product-card, .o_pos_product_card, .product:not([class*="o_colorlist"]),
+    .orderline, .order-line {
         background-color: #2b3035 !important;
         border-color: #495057 !important;
         color: #e9ecef !important;
@@ -57,12 +60,22 @@
             color: #e9ecef !important;
         }
     }
-    .btn-light {
+    // Tinted cards keep category wash + border strip; ensure strip wins.
+    .rightpane .product[class*="o_colorlist"] {
+        border-bottom-color: var(--border-color) !important;
+    }
+    .product[class*="o_colorlist"] .price,
+    .product[class*="o_colorlist"] .qty,
+    .product[class*="o_colorlist"] .product-name,
+    .product[class*="o_colorlist"] .product-content {
+        color: #e9ecef !important;
+    }
+    .btn-light:not([class*="o_colorlist"]) {
         background-color: #343a40 !important;
         border-color: #495057 !important;
         color: #e9ecef !important;
     }
-    .btn-secondary {
+    .btn-secondary:not([class*="o_colorlist"]) {
         background-color: #495057 !important;
         border-color: #6c757d !important;
         color: #fff !important;
