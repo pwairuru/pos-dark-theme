@@ -22,14 +22,13 @@ function systemIsDark() {
 }
 
 function posRoot() {
-    return document.querySelector(".pos") || document.documentElement;
+    return document.querySelector(".pos");
 }
 
 export const posThemeService = {
     dependencies: [],
     start() {
         const media = window.matchMedia("(prefers-color-scheme: dark)");
-        const apply = () => this.apply();
         if (media && media.addEventListener) {
             media.addEventListener("change", () => {
                 if (this.getMode() === "system") {
@@ -69,6 +68,9 @@ export const posThemeService = {
     },
     apply() {
         const root = posRoot();
+        if (!root) {
+            return false;
+        }
         const dark = this.getEffective() === "dark";
         root.classList.toggle("o_dark_mode", dark);
         try {
